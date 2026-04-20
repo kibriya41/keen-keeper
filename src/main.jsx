@@ -4,6 +4,10 @@ import './index.css'
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import RootLayout from './layout/RootLayout';
+import NotFound from './pages/notFound/NotFound';
+import HomePage from './pages/home/HomePage';
+import Timeline from './pages/timeline/Timeline';
+import Stats from './pages/stats/stats';
 
 const router = createBrowserRouter([
   {
@@ -12,18 +16,18 @@ const router = createBrowserRouter([
    children:[
     {
       path:"/",
-      element: <h2>Home Page</h2>
+      Component: HomePage
     },
     {
       path:"/timeline",
-      element: <h2>Time line page</h2>
+      element: <Timeline />
     },
     {
       path:"/stats",
-      element: <h2>stats page</h2>
+      element: <Stats />
     },
-    
-   ]
+   ],
+   errorElement: <NotFound />
   },
 ]);
 
