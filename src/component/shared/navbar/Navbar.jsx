@@ -8,10 +8,10 @@ import logo from "../../../assets/images/logo.png"
 
 const Navbar = () => {
     return (
-        <nav className="">
+        <nav className="container mx-auto">
 
             {/* Main Navbar */}
-            <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div className=" px-6 h-16 flex items-center justify-between">
 
                 <Link to="/">
                     <img src={logo} alt="" />

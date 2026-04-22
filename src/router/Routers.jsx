@@ -14,7 +14,6 @@ export const router = createBrowserRouter([
     {
       path:"/",
       Component: HomePage,
-      loader: ()=> fetch("/data.json")
     },
     {
       path: "/:id",
@@ -29,6 +28,6 @@ export const router = createBrowserRouter([
       element: <Stats />
     },
    ],
-   errorElement: <NotFound />
+  //  errorElement: <NotFound />
   },
 ]);

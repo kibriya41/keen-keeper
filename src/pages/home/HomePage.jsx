@@ -2,12 +2,9 @@ import { BarLoader, PacmanLoader } from 'react-spinners';
 import Friends from './Friends';
 import useFriends from '../../hooks/useFriends';
 
-
 const HomePage = () => {
 
-    const {friends,loading} = useFriends();
-    console.log(friends, loading);
-    
+    const { friends, loading } = useFriends();
 
     return (
         <div className='bg-[#F8FAFC]'>
@@ -43,13 +40,14 @@ const HomePage = () => {
                 <div>
                     <p className='text-2xl font-semibold text-[#1F2937] border-t border-gray-200 mt-10 pt-10'>Your Friends</p>
                     {loading ? (<div className='py-6
-                     flex justify-center items-center'><PacmanLoader /></div>) : (<div div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6'>{friends.map((friend, index) =>
+                     flex justify-center items-center'><PacmanLoader color='#244D3F' /></div>) : (<div div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6'>{friends.map((friend, index) =>
                         <Friends friend={friend} key={index} />
                     )}
                     </div>
                     )}
                 </div>
             </div>
+
         </div >
     );
 };
