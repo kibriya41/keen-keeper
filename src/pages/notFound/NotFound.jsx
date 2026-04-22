@@ -31,7 +31,7 @@ const NotFound = () => {
           className="inline-flex items-center gap-3 bg-white hover:bg-[#4FD1C5] text-[#0F4A3F] hover:text-white px-8 py-4 rounded-2xl font-medium text-base transition-all duration-300 active:scale-95"
         >
           <Home size={22} />
-          Return to Dashboard
+          Return to Home
         </button>
 
         {/* Subtle Brand Line */}

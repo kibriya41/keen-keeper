@@ -13,9 +13,9 @@ const Navbar = () => {
             {/* Main Navbar */}
             <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
-                <div>
+                <Link to="/">
                     <img src={logo} alt="" />
-                </div>
+                </Link>
 
                 {/* Navigation Links */}
                 <ul className="flex items-center gap-4 text-sm">

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Emily Carter",
-    "picture": "https://example.com/photo1.jpg",
+    "picture": "https://images.pexels.com/photos/5037083/pexels-photo-5037083.jpeg",
     "email": "emily.carter@example.com",
     "days_since_contact": 5,
     "status": "active",
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "name": "Michael Brown",
-    "picture": "https://example.com/photo2.jpg",
+    "picture": "https://images.pexels.com/photos/11034075/pexels-photo-11034075.jpeg",
     "email": "michael.brown@example.com",
     "days_since_contact": 20,
     "status": "overdue",
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "name": "Sophia Wilson",
-    "picture": "https://example.com/photo3.jpg",
+    "picture": "https://images.pexels.com/photos/20831814/pexels-photo-20831814.jpeg",
     "email": "sophia.wilson@example.com",
     "days_since_contact": 2,
     "status": "active",
@@ -38,7 +38,7 @@
   {
     "id": 4,
     "name": "Daniel Lee",
-    "picture": "https://example.com/photo4.jpg",
+    "picture": "https://images.pexels.com/photos/8278885/pexels-photo-8278885.jpeg",
     "email": "daniel.lee@example.com",
     "days_since_contact": 9,
     "status": "due",
@@ -50,7 +50,7 @@
   {
     "id": 5,
     "name": "Olivia Martinez",
-    "picture": "https://example.com/photo5.jpg",
+    "picture": "https://images.pexels.com/photos/18222927/pexels-photo-18222927.jpeg",
     "email": "olivia.m@example.com",
     "days_since_contact": 14,
     "status": "overdue",
@@ -62,8 +62,7 @@
   {
     "id": 6,
     "name": "James Anderson",
-    "picture": "https://example.com/photo6.jpg",
-    "email": "james.anderson@example.com",
+    "picture": "https://media.istockphoto.com/id/1917023956/photo/happy-woman-with-a-yellow-hiking-backpack-enjoying-the-mountain-landscape.jpg?b=1&s=612x612&w=0&k=20&c=Tyu77zH5UM9RYQH_S1pRUX70ZifrEJT_EGmaYfYGcNE=",
     "days_since_contact": 1,
     "status": "active",
     "tags": ["neighbor"],
@@ -74,7 +73,7 @@
   {
     "id": 7,
     "name": "Ava Thomas",
-    "picture": "https://example.com/photo7.jpg",
+    "picture": "https://images.pexels.com/photos/36990467/pexels-photo-36990467.jpeg",
     "email": "ava.thomas@example.com",
     "days_since_contact": 16,
     "status": "overdue",
@@ -86,7 +85,7 @@
   {
     "id": 8,
     "name": "William Harris",
-    "picture": "https://example.com/photo8.jpg",
+    "picture": "https://images.pexels.com/photos/32838310/pexels-photo-32838310.jpeg",
     "email": "william.harris@example.com",
     "days_since_contact": 7,
     "status": "due",
@@ -98,7 +97,7 @@
   {
     "id": 9,
     "name": "Isabella Clark",
-    "picture": "https://example.com/photo9.jpg",
+    "picture": "https://images.pexels.com/photos/17985673/pexels-photo-17985673.jpeg",
     "email": "isabella.clark@example.com",
     "days_since_contact": 3,
     "status": "active",
@@ -110,7 +109,7 @@
   {
     "id": 10,
     "name": "Ethan Walker",
-    "picture": "https://example.com/photo10.jpg",
+    "picture": "https://images.pexels.com/photos/35252922/pexels-photo-35252922.jpeg",
     "email": "ethan.walker@example.com",
     "days_since_contact": 11,
     "status": "due",
@@ -122,7 +121,7 @@
   {
     "id": 11,
     "name": "Mia Hall",
-    "picture": "https://example.com/photo11.jpg",
+    "picture": "https://images.pexels.com/photos/37081502/pexels-photo-37081502.jpeg",
     "email": "mia.hall@example.com",
     "days_since_contact": 18,
     "status": "overdue",
@@ -134,7 +133,7 @@
   {
     "id": 12,
     "name": "Lucas Young",
-    "picture": "https://example.com/photo12.jpg",
+    "picture": "https://images.pexels.com/photos/37149787/pexels-photo-37149787.jpeg",
     "email": "lucas.young@example.com",
     "days_since_contact": 6,
     "status": "active",

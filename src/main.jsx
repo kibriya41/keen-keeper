@@ -7,7 +7,7 @@ import RootLayout from './layout/RootLayout';
 import NotFound from './pages/notFound/NotFound';
 import HomePage from './pages/home/HomePage';
 import Timeline from './pages/timeline/Timeline';
-import Stats from './pages/stats/stats';
+import Stats from './pages/stats/Stats';
 
 const router = createBrowserRouter([
   {
@@ -16,7 +16,8 @@ const router = createBrowserRouter([
    children:[
     {
       path:"/",
-      Component: HomePage
+      Component: HomePage,
+      loader: ()=> fetch("/data.json")
     },
     {
       path:"/timeline",
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
       element: <Stats />
     },
    ],
-   errorElement: <NotFound />
+  //  errorElement: <NotFound />
   },
 ]);
 
