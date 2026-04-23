@@ -5,7 +5,7 @@
     "picture": "https://images.pexels.com/photos/5037083/pexels-photo-5037083.jpeg",
     "email": "emily.carter@example.com",
     "days_since_contact": 5,
-    "status": "active",
+    "status": "due",
     "tags": ["work", "teammate"],
     "bio": "Works in the same project team.",
     "goal": 7,
