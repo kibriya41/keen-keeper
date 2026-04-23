@@ -3,15 +3,25 @@ import { useParams } from 'react-router';
 import { Phone, MessageSquare, Video, Lock, Archive, Trash2 } from "lucide-react";
 import useFriends from '../../hooks/useFriends';
 import { PacmanLoader } from 'react-spinners';
+import NotFound from '../notFound/NotFound';
 
 const FriendsDetails = () => {
 
-    // const { id } = useParams();
-    // const {friends,loading} = useFriends();
-
-    // const expectedFriend = friends.find((friend) => String(friend.id) === id);
-    // console.log(expectedFriend, "ex");
-    // console.log(loading);
+    const tagStyles = {
+        work: "bg-green-100 text-green-700",
+        teammate: "bg-green-100 text-green-700",
+        family: "bg-blue-100 text-blue-700",
+        friend: "bg-purple-100 text-purple-700",
+        travel: "bg-yellow-100 text-yellow-700",
+        gym: "bg-pink-100 text-pink-700",
+        buddy: "bg-pink-100 text-pink-700",
+        client: "bg-indigo-100 text-indigo-700",
+        school: "bg-orange-100 text-orange-700",
+        mentor: "bg-teal-100 text-teal-700",
+        colleague: "bg-cyan-100 text-cyan-700",
+        close: "bg-red-100 text-red-700",
+        startup: "bg-gray-200 text-gray-700",
+    };
 
     const { id } = useParams();
     const { friends, loading } = useFriends();
@@ -25,11 +35,11 @@ const FriendsDetails = () => {
     }
 
     if (!expectedFriend) {
-        return <div className="text-center mt-10">No Friend Found</div>;
+        return <NotFound />;
     }
     return (
-        <div className='bg-[#F8FAFC] my-20'>
-            <div className="max-w-5xl mx-auto bg-[#F8FAFC] rounded-2xl border border-gray-200 shadow-sm p-6">
+        <div className='bg-[#F8FAFC] py-20'>
+            <div className="container mx-auto bg-[#F8FAFC]">
                 <div className="grid grid-cols-12 gap-6">
 
                     {/* LEFT PANEL */}
@@ -37,15 +47,20 @@ const FriendsDetails = () => {
                         <div className='bg-white w-full p-6 text-center rounded-lg transition-all duration-500 hover:shadow-[0_10px_30px_rgba(148,68,251,0.2)] hover:-translate-y-1 flex flex-col items-center'>
                             <img src={expectedFriend.picture} alt="picture" className='w-20 h-20 rounded-full' />
                             <h5 className='font-semibold text-xl text-[#1F2937] mt-3 '>{expectedFriend.name}</h5>
-                            <ul className='mt-2'>
-                                {
-                                    expectedFriend.tags.map((tag, index) => (
-                                        <li key={index} className="">{tag}</li>
-                                    ))
-                                }
-                            </ul>
-                                <p className='text-xs text-[#64748B] font-medium italic mt-3'>"{expectedFriend.bio}"</p>
-                                <p className='text-xs text-[#64748B] font-medium mt-3 '>{expectedFriend.email}</p>
+                            <div className="flex gap-2 flex-wrap justify-center mt-2">
+                                {expectedFriend.tags.map((tag, i) => (
+                                    <span
+                                        key={i}
+                                        className={`text-xs px-3 py-1 rounded-full capitalize ${tagStyles[tag] || "bg-gray-100 text-gray-600"
+                                            }`}
+                                    >
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+
+                            <p className='text-xs text-[#64748B] font-medium italic mt-3'>"{expectedFriend.bio}"</p>
+                            <p className='text-xs text-[#64748B] font-medium mt-3 '>{expectedFriend.email}</p>
                         </div>
                         {/* BUTTONS */}
                         <div className="w-full mt-5 space-y-2">
@@ -76,7 +91,7 @@ const FriendsDetails = () => {
                                     {expectedFriend.days_since_contact}
                                 </h3>
                                 <p className=" text-[#64748B] mt-2">
-                                   Days Since Contact
+                                    Days Since Contact
                                 </p>
                             </div>
 
@@ -87,10 +102,10 @@ const FriendsDetails = () => {
                                     {expectedFriend.goal}
                                 </h3>
                                 <p className="text-[#64748B] mt-2">
-                                   Goal (Days)    
+                                    Goal (Days)
                                 </p>
                             </div>
-                            
+
                             <div
                                 className="bg-white border border-gray-100 rounded-xl py-4 text-center"
                             >
@@ -98,7 +113,7 @@ const FriendsDetails = () => {
                                     {expectedFriend.next_due_date}
                                 </h3>
                                 <p className="text-[#64748B] mt-2">
-                                   Next Due
+                                    Next Due
                                 </p>
                             </div>
                         </div>
