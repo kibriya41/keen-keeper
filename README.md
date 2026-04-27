@@ -1,16 +1,66 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🚀 Keen Keeper
 
-Currently, two official plugins are available:
+## 📌 Description
+Keen Keeper is a modern web application designed to help users manage and track their connections efficiently. It provides an organized timeline, status tracking, and filtering features to keep important relationships active and up-to-date.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🛠️ Technologies Used
+# 🚀 Keen Keeper
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📌 Description
+Keen Keeper is a modern web application designed to help users manage and track their connections efficiently. It provides an organized timeline, status tracking, and filtering features to keep important relationships active and up-to-date.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies Used
+- React.js
+- JavaScript (ES6+)
+- CSS / Tailwind CSS (or your styling choice)
+- Context API (for state management)
+- + more
+
+---
+
+## ✨ Key Features
+- 📊 Dynamic Timeline with filtering (All / Active / Inactive)
+- 👥 Contact management with status tracking
+- ⚡ Responsive and user-friendly UI design
+
+---
+
+## 📷 Preview
+Live Site: https://lucent-malabi-05e42d.netlify.app
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/your-username/keen-keeper.git
+cd keen-keeper
+npm install
+npm start
+---
+
+## ✨ Key Features
+- 📊 Dynamic Timeline with filtering (All / Active / Inactive)
+- 👥 Contact management with status tracking
+- ⚡ Responsive and user-friendly UI design
+
+---
+
+## 📷 Preview
+Live Site: https://lucent-malabi-05e42d.netlify.app
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/your-username/keen-keeper.git
+cd keen-keeper
+npm install
+npm start
