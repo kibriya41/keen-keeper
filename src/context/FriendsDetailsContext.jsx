@@ -5,7 +5,7 @@ import { FriendsContext } from './FriendsContext';
 const FriendsDetailsContext = ({ children }) => {
     const [timeline, setTimeline] = useState([]);
     const data = {
-        timeline, setTimeline,
+        timeline, setTimeline
     };
 
     return (
@@ -14,15 +14,3 @@ const FriendsDetailsContext = ({ children }) => {
 };
 
 export default FriendsDetailsContext;
-
-// import React from 'react';
-
-// const FriendsDetailsContext = () => {
-//     return (
-//         <div>
-            
-//         </div>
-//     );
-// };
-
-// export default FriendsDetailsContext;

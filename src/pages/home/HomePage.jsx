@@ -1,6 +1,7 @@
 import { BarLoader, PacmanLoader } from 'react-spinners';
 import Friends from './Friends';
 import useFriends from '../../hooks/useFriends';
+import { BlinkBlur } from 'react-loading-indicators';
 
 const HomePage = () => {
 
@@ -74,7 +75,7 @@ const HomePage = () => {
 
       {loading ? (
         <div className='py-10 flex justify-center items-center'>
-          <PacmanLoader color='#244D3F' />
+       <BlinkBlur color="#244D3F" size="medium"/>
         </div>
       ) : (
         <div className='mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6'>

@@ -5,6 +5,7 @@ import useFriends from '../../hooks/useFriends';
 import { PacmanLoader } from 'react-spinners';
 import NotFound from '../notFound/NotFound';
 import { FriendsContext } from '../../context/FriendsContext';
+import { toast } from 'react-toastify';
 
 const FriendsDetails = () => {
 
@@ -32,41 +33,19 @@ const FriendsDetails = () => {
     );
     const { timeline, setTimeline } = useContext(FriendsContext);
 
+    const handleFriendDetailsData = (type, icon, friend) => {
 
-    const handleCall = (expectedFriend) => {
-        const alreadyCalled = timeline.find((friend) => friend.friendId === expectedFriend.friendId,);
-
-        if (alreadyCalled) {
-            alert(`${expectedFriend.name} already called`)
+        const newData = {
+            ...friend,
+            action: type,
+            icon: icon,
+            time: new Date().toISOString(), 
         }
-        else {
-            setTimeline([...timeline, expectedFriend]);
-            alert(`Start coll with ${expectedFriend.name}`)
-        }
+        setTimeline([...timeline,newData]);
+        toast.success(`Contact with ${expectedFriend.name}`)
     };
-
-    const handleText = (expectedFriend) => {
-        const alreadyTexting = timeline.find((friend) => friend.friendId === expectedFriend.friendId,);
-
-        if (alreadyTexting) {
-            alert(`${expectedFriend.name} already called`)
-        }
-        else {
-            setTimeline([...timeline, expectedFriend]);
-            alert(`Start texting with ${expectedFriend.name}`)
-        }
-    };
-    const handleVideo = (expectedFriend) => {
-        const alreadyInVideo = timeline.find((friend) => friend.friendId === expectedFriend.friendId,);
-
-        if (alreadyInVideo) {
-            alert(`${expectedFriend.name} already called`)
-        }
-        else {
-            setTimeline([...timeline, expectedFriend]);
-            alert(`Start video with ${expectedFriend.name}`)
-        }
-    };
+    console.log(timeline);
+    
 
     if (loading) {
         return <div className="flex items-center justify-center m-10"><PacmanLoader color='#244D3F' /></div>;
@@ -194,7 +173,7 @@ const FriendsDetails = () => {
 
                             <div className="grid grid-cols-3 gap-3 md:gap-4">
                                 <button
-                                    onClick={() => handleCall(expectedFriend)}
+                                    onClick={() => handleFriendDetailsData("Call",<Phone />,expectedFriend)}
                                     className="bg-[#E9E9E9] rounded-xl py-4 md:py-5 flex flex-col items-center hover:bg-gray-100 transition"
                                 >
                                     <Phone />
@@ -202,7 +181,7 @@ const FriendsDetails = () => {
                                 </button>
 
                                 <button
-                                    onClick={() => handleText(expectedFriend)}
+                                    onClick={() => handleFriendDetailsData("Text",<MessageSquare />,expectedFriend)}
                                     className="bg-[#E9E9E9] rounded-xl py-4 md:py-5 flex flex-col items-center hover:bg-gray-100 transition"
                                 >
                                     <MessageSquare />
@@ -210,7 +189,7 @@ const FriendsDetails = () => {
                                 </button>
 
                                 <button
-                                    onClick={() => handleVideo(expectedFriend)}
+                                    onClick={() => handleFriendDetailsData("Video",<Video />,expectedFriend)}
                                     className="bg-[#E9E9E9] rounded-xl py-4 md:py-5 flex flex-col items-center hover:bg-gray-100 transition"
                                 >
                                     <Video />

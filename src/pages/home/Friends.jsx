@@ -21,9 +21,9 @@ const Friends = ({ friend }) => {
     };
 
     const statusStyles = {
-        active: "bg-green-100 text-green-700",
-        overdue: "bg-red-100 text-red-700",
-        due: "bg-yellow-100 text-yellow-700",
+         "on-track": "bg-green-400 text-white",
+        "overdue": "bg-red-400 text-white",
+        "almost due": "bg-yellow-400 text-white",
     };
 
     return (
