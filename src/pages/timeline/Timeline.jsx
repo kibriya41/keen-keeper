@@ -5,10 +5,10 @@ import { FaAnglesDown } from "react-icons/fa6";
 const Timeline = () => {
   const { timeline } = useContext(FriendsContext);
 
-  // ✅ state for filter
+  //  state for filter
   const [filter, setFilter] = useState("all");
 
-  // ✅ filter logic
+  // filter logic
   const filteredTimeline =
     filter === "all"
       ? timeline
