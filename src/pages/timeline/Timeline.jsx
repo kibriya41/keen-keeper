@@ -1,13 +1,23 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FriendsContext } from "../../context/FriendsContext";
-import { FaHandshake, FaPhoneAlt } from "react-icons/fa";
-import { IoChatbubbleEllipsesOutline, IoVideocamOutline } from "react-icons/io5";
+import { FaAnglesDown } from "react-icons/fa6";
 
 const Timeline = () => {
   const { timeline } = useContext(FriendsContext);
 
+  // ✅ state for filter
+  const [filter, setFilter] = useState("all");
+
+  // ✅ filter logic
+  const filteredTimeline =
+    filter === "all"
+      ? timeline
+      : timeline.filter((item) =>
+          item.action.toLowerCase() === filter
+        );
+
   return (
-    <div className='bg-[#F8FAFC] py-12 md:py-20'>
+    <div className="bg-[#F8FAFC] py-12 md:py-20">
       <div className="container mx-auto px-4">
 
         {/* Title */}
@@ -15,9 +25,35 @@ const Timeline = () => {
           Timeline
         </h2>
 
+        {/* Dropdown */}
+        <details className="dropdown">
+          <summary className="btn m-1">
+            Filter timeline <FaAnglesDown />
+          </summary>
+
+          <ul className="menu dropdown-content bg-base-100 rounded-box z-10 w-52 p-2 shadow-sm">
+
+            <li>
+              <a onClick={() => setFilter("all")}>All</a>
+            </li>
+
+            <li>
+              <a onClick={() => setFilter("call")}>Call</a>
+            </li>
+
+            <li>
+              <a onClick={() => setFilter("text")}>Text</a>
+            </li>
+
+            <li>
+              <a onClick={() => setFilter("video")}>Video</a>
+            </li>
+          </ul>
+        </details>
+
         {/* Timeline List */}
-        <div className="space-y-4">
-          {timeline.map((item, index) => (
+        <div className="space-y-4 mt-4">
+          {filteredTimeline.map((item, index) => (
             <div
               key={index}
               className="flex items-center gap-4 bg-white p-4 md:p-5 rounded-lg border border-gray-200 hover:shadow-sm transition"
@@ -33,11 +69,9 @@ const Timeline = () => {
                   <span className="font-medium text-xl text-[#244D3F]">
                     {item.action}
                   </span>{" "}
-                  with{" "}
-                  <span className="text-gray-500">
-                    {item.name}
-                  </span>
+                  with <span className="text-gray-500">{item.name}</span>
                 </p>
+
                 <p className="text-sm md:text-lg text-[#64748B]">
                   {new Date(item.time).toLocaleDateString("en-US", {
                     year: "numeric",
