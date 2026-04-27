@@ -8,10 +8,15 @@ import HomePage from './pages/home/HomePage';
 import Timeline from './pages/timeline/Timeline';
 import Stats from './pages/stats/Stats';
 import { router } from './router/Routers';
+import FriendsDetailsContext from './context/FriendsDetailsContext';
+import { ToastContainer } from 'react-toastify';
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-     <RouterProvider router={router} />,
+    <FriendsDetailsContext >
+      <RouterProvider router={router} />,
+              <ToastContainer />
+    </FriendsDetailsContext>
   </StrictMode>,
 )
