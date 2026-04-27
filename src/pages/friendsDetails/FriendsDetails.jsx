@@ -39,13 +39,14 @@ const FriendsDetails = () => {
             ...friend,
             action: type,
             icon: icon,
-            time: new Date().toISOString(), 
+            time: new Date().toISOString(),
         }
-        setTimeline([...timeline,newData]);
-        toast.success(`Contact with ${expectedFriend.name}`)
+        setTimeline([...timeline, newData]);
+        toast.success(`Contact with ${expectedFriend.name}`, {
+            position: "top-center"
+        })
     };
-    console.log(timeline);
-    
+
 
     if (loading) {
         return <div className="flex items-center justify-center m-10"><PacmanLoader color='#244D3F' /></div>;
@@ -173,7 +174,7 @@ const FriendsDetails = () => {
 
                             <div className="grid grid-cols-3 gap-3 md:gap-4">
                                 <button
-                                    onClick={() => handleFriendDetailsData("Call",<Phone />,expectedFriend)}
+                                    onClick={() => handleFriendDetailsData("Call", <Phone />, expectedFriend)}
                                     className="bg-[#E9E9E9] rounded-xl py-4 md:py-5 flex flex-col items-center hover:bg-gray-100 transition"
                                 >
                                     <Phone />
@@ -181,7 +182,7 @@ const FriendsDetails = () => {
                                 </button>
 
                                 <button
-                                    onClick={() => handleFriendDetailsData("Text",<MessageSquare />,expectedFriend)}
+                                    onClick={() => handleFriendDetailsData("Text", <MessageSquare />, expectedFriend)}
                                     className="bg-[#E9E9E9] rounded-xl py-4 md:py-5 flex flex-col items-center hover:bg-gray-100 transition"
                                 >
                                     <MessageSquare />
@@ -189,7 +190,7 @@ const FriendsDetails = () => {
                                 </button>
 
                                 <button
-                                    onClick={() => handleFriendDetailsData("Video",<Video />,expectedFriend)}
+                                    onClick={() => handleFriendDetailsData("Video", <Video />, expectedFriend)}
                                     className="bg-[#E9E9E9] rounded-xl py-4 md:py-5 flex flex-col items-center hover:bg-gray-100 transition"
                                 >
                                     <Video />
